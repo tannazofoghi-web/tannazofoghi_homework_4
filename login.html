@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block title %}Secure Login | ShopEase{% endblock %}
+{% block content %}
+<section class="auth-wrap">
+  <form class="auth-card" method="post" action="{{ url_for('login') }}">
+    <p class="eyebrow">WELCOME BACK</p>
+    <h1>Secure login</h1>
+    <p class="muted">Sign in to continue. Admin pages require an administrator account.</p>
+    <label for="username">Username</label>
+    <input id="username" name="username" autocomplete="username" required>
+    <label for="password">Password</label>
+    <input id="password" name="password" type="password" autocomplete="current-password" required>
+    <button class="button button-primary full-width" type="submit">Log in</button>
+    <p class="small-note">Demo admin: <code>admin</code> / <code>ChangeMe123!</code>. Change this password before any real deployment.</p>
+  </form>
+</section>
+{% endblock %}
